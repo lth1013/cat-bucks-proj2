@@ -18,13 +18,16 @@
 .cart{
     position: fixed;
     top: 0;
-    right: 0;
+    right: -100%;
     width: 360px;
     min-height: 100vh;
     padding: 20px;
     background: white;
     box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
+    transition: 0.3s;
 }
+
+
 
 .cart-title{
     text-align: center;
@@ -265,7 +268,7 @@ body {
     color: #088178;
 }
 
-#product1 .pro .cart{
+#product1 .pro .add-cart{
     width: 40px;
     height: 40px;
     line-height: 40px;
