@@ -15,14 +15,14 @@ Product.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    desciption: {
+    description: {
       type: DataTypes.STRING,
     },
     image: {
       type: DataTypes.STRING,
     },
     price: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.DECIMAL(10, 2),
     },
   },
   {
