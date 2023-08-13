@@ -1,10 +1,10 @@
 const router = require('express').Router();
-const foodRoutes = require('./foodRoutes');
 const cartRoutes = require('./cartRoutes');
 const catRoutes = require('./catRoutes');
+const userRoutes = require('./userRoutes');
 
-router.use("/food", foodRoutes);
+router.use("/users", userRoutes);
 router.use("/cart", cartRoutes);
-router.use("/cat", catRoutes);
+router.use("/cats", catRoutes);
 
 module.exports = router;

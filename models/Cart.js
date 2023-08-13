@@ -33,3 +33,5 @@ Cart.init(
     modelName: "cart",
   }
 );
+
+module.exports = Cart;
