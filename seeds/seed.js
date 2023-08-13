@@ -13,17 +13,21 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  for (const product of productData) {
-    const randomUser = users[Math.floor(Math.random() * users.length)].id;
-    const randomProduct = await Product.create({
-      ...product,
-      user_id: randomUser,
-    });
+  const products = await Product.bulkCreate(productData, {
+    individualHooks: true,
+    returning: true,
+  });
 
-    await Cart.create({
-      user_id: users[Math.floor(Math.random() * users.length)].id,
-      product_id: product.id,
-    });
+  for (const cartItem of cartData) {
+    const user = users.find(user => user.id === cartItem.user_id);
+    const product = products.find(product => product.id === cartItem.product_id);
+    
+    if (user && product) {
+      await Cart.create({
+        user_id: user.id,
+        product_id: product.id,
+      });
+    }
   }
 
   process.exit(0);
