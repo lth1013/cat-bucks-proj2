@@ -24,13 +24,6 @@ Product.init(
     price: {
       type: DataTypes.INTEGER,
     },
-    category_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: "category",
-        key: "id",
-      },
-    },
   },
   {
     sequelize,
@@ -40,3 +33,5 @@ Product.init(
     modelName: "product",
   }
 );
+
+module.exports = Product;
