@@ -10,7 +10,11 @@ const app = express();
 // we don't need to render any products here, because we are not on the products page.
 
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/index.html");
+  if (!req.session.logged_in) {
+    res.redirect("/welcome.html");
+  } else {
+    res.sendFile(__dirname + "/index.html");
+  }
 });
 
 module.exports = router;

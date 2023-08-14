@@ -1,12 +1,50 @@
 [
   {
-    "product_name": "Product 1",
-    "price": 19.99,
-    "description": "This is product 1 description."
+    "product_name": "Birman",
+    "price": 50,
+    "description": "The Sacred Cat of Burma",
+    "image": "images/cats/birman.jpg"
   },
   {
-    "product_name": "Product 2",
-    "price": 29.99,
-    "description": "This is product 2 description."
+    "product_name": "British Shorthair",
+    "price": 50,
+    "description": "Pedigreed Version",
+    "image": "images/cats/British-Shorthair.jpg"
+  },
+  {
+    "product_name": "Maine Coon",
+    "price": 50,
+    "description": "Largest Domesticated Cat",
+    "image": "images/cats/alt-maine-coon.jpg"
+  },
+  {
+    "product_name": "Persian Cat",
+    "price": 50,
+    "description": "The Persian Longhair",
+    "image": "images/cats/persian-cat.jpg"
+  },
+  {
+    "product_name": "Scottish Fold",
+    "price": 50,
+    "description": "Owl-like Cat",
+    "image": "images/cats/scottish-fold.jpg"
+  },
+  {
+    "product_name": "Siamese",
+    "price": 50,
+    "description": "Highly Intelligent and very Vocal",
+    "image": "images/cats/siamese.jpg"
+  },
+  {
+    "product_name": "Siberian Cat",
+    "price": 50,
+    "description": "Landrace of Domestic Cats",
+    "image": "images/cats/siberian-cat.jpg"
+  },
+  {
+    "product_name": "Sphynx",
+    "price": 50,
+    "description": "Hairless Cat",
+    "image": "images/cats/sphynx-cat.jpg"
   }
 ]
