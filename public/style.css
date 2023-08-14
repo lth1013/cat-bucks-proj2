@@ -5,6 +5,9 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
+#cats, #toys, #food{
+    color: white;
+}
 
 .logo {
     font-size: 24px;
