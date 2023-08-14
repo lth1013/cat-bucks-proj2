@@ -43,84 +43,25 @@
 
 
     <!-- Cats For Sale -->
+
+    {{!-- HANDLEBARS OUTLINE --}}
     <div id="cats"> <p>z</p> </div>
     <section class="section-p1 product1">
         <h2>Cat Inventory</h2>
         <p>Cute cats in need of a home</p>
+        {{#each products as |product| }}
         <div class="pro-container">
             <div class="pro">
-                <img src="images/cats/birman.jpg" alt="Birman cat" class="product-img">
+                <img src={{product.image}} alt="Birman cat" class="product-img">
                 <div class="des">
-                    <span class="product-title">Birman</span>
-                    <h5>The Sacred Cat of Burma</h5>
-                    <h4 class="price">$50</h4>
-                </div>
-                <a href="#"><i class='bx bx-cart add-cart'></i></a>
-            </div>
-            <div class="pro">
-                <img src="images/cats/British-Shorthair.jpg" alt="British Shorthair cat" class="product-img">
-                <div class="des">
-                    <span class="product-title">British Shorthair</span>
-                    <h5>Pedigreed Version</h5>
-                    <h4 class="price">$50</h4>
-                </div>
-                <a href="#"><i class='bx bx-cart add-cart'></i></a>
-            </div>
-            <div class="pro">
-                <img src="images/cats/alt-maine-coon.jpg" alt="Maine Coon cat" class="product-img">
-                <div class="des">
-                    <span class="product-title">Maine Coon</span>
-                    <h5>Largest Domesticated Cat</h5>
-                    <h4 class="price">$50</h4>
-                </div>
-                <a href="#"><i class='bx bx-cart add-cart'></i></a>
-            </div>
-            <div class="pro">
-                <img src="images/cats/persian-cat.jpg" alt="Persian Cat" class="product-img">
-                <div class="des">
-                    <span class="product-title">Persian Cat</span>
-                    <h5>The Persian Longhair</h5>
-                    <h4 class="price">$50</h4>
-                </div>
-                <a href="#"><i class='bx bx-cart add-cart'></i></a>
-            </div>
-            <div class="pro">
-                <img src="images/cats/scottish-fold.jpg" alt="Scottish Fold" class="product-img">
-                <div class="des">
-                    <span class="product-title">Scottish Fold</span>
-                    <h5>Owl-like Cat</h5>
-                    <h4 class="price">$50</h4>
-                </div>
-                <a href="#"><i class='bx bx-cart add-cart'></i></a>
-            </div>
-            <div class="pro">
-                <img src="images/cats/siamese.jpg" alt="Siamese Cat" class="product-img">
-                <div class="des">
-                    <span class="product-title">Siamese</span>
-                    <h5>Highly Intelligent and very Vocal</h5>
-                    <h4 class="price">$50</h4>
-                </div>
-                <a href="#"><i class='bx bx-cart add-cart'></i></a>
-            </div>
-            <div class="pro">
-                <img src="images/cats/siberian-cat.jpg" alt="Siberian Cat" class="product-img">
-                <div class="des">
-                    <span class="product-title">Siberian Cat</span>
-                    <h5>Landrace of Domestic Cats</h5>
-                    <h4 class="price">$50</h4>
-                </div>
-                <a href="#"><i class='bx bx-cart add-cart'></i></a>
-            </div>
-            <div class="pro">
-                <img src="images/cats/sphynx-cat.jpg" alt="Sphynx Cat" class="product-img">
-                <div class="des">
-                    <span class="product-title">Sphynx</span>
-                    <h5>Hairless Cat</h5>
-                    <h4 class="price">$50</h4>
+                    <span class="product-title">{{product.product_name}}</span>
+                    <h5>{{product.description}}</h5>
+                    <h4 class="price">{{product.price}}</h4>
                 </div>
                 <a href="#"><i class='bx bx-cart add-cart'></i></a>
             </div>
         </div>
+        {{/each}}
 
     <!-- Cat Toys for Sale -->
     <div id="toys"> <p>z</p> </div>
