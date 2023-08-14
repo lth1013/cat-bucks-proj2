@@ -18,7 +18,7 @@
 .cart{
     position: fixed;
     top: 0;
-    right: 0%;
+    right: -100%;
     width: 360px;
     min-height: 100vh;
     padding: 20px;
@@ -213,11 +213,11 @@ body {
     left: 20px;
 }
 
-#product1 {
+.product1 {
     text-align: center;
 }
 
-#product1 .pro-container {
+.product1 .pro-container {
     display: flex;
     justify-content: space-between;
     padding-top: 20px;
@@ -226,7 +226,7 @@ body {
 
 
 
-#product1 .pro{
+.product1 .pro{
     width: 23%;
     min-width: 250px;
     padding: 10px 12px;
@@ -239,40 +239,40 @@ body {
     position: relative;
 }
 
-#product1 .pro:hover {
+.product1 .pro:hover {
     box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
 }
 
 
-#product1 .pro img{
+.product1 .pro img{
     width: 100%;
     border-radius: 20px;
 }
 
-#product1 .pro .des{
+.product1 .pro .des{
     text-align: start;
     padding: 10px 0;
 }
 
-#product1 .pro .des span{
+.product1 .pro .des span{
     color: #606063;
     font-size: 20px;
 }
 
-#product1 .pro .des h5{
+.product1 .pro .des h5{
     padding-top: 7px;
     color: #1a1a1a;
     font-size: 14px;
 }
 
-#product1 .pro .des h4{
+.product1 .pro .des h4{
     padding-top: 7px;
     font-size: 15px;
     font-weight: 700;
     color: #088178;
 }
 
-#product1 .pro .add-cart{
+.product1 .pro .add-cart{
     width: 40px;
     height: 40px;
     line-height: 40px;
