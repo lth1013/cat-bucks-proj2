@@ -3,6 +3,7 @@
     "seed": "node seeds/seed.js"
   },
   "dependencies": {
+    "@sjmc11/tourguidejs": "^0.0.10",
     "bcrypt": "^5.1.0",
     "connect-session-sequelize": "^7.1.7",
     "dotenv": "^16.3.1",

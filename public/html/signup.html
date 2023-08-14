@@ -1,108 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cat Bucks - Sign Up</title>
-    <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #E3E6F3;
-            font-family: 'Roboto', sans-serif;
-        }
-        .container {
-            text-align: center;
-            background-color: #fff;
-            padding: 40px;
-            border-radius: 25px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
-        }
-        .logo {
-            font-size: 36px;
-            font-weight: 700;
-            color: #088178;
-            font-style: italic;
-            text-decoration: none;
-            font-family: 'Dancing Script', sans-serif;
-            margin-bottom: 20px;
-        }
-        .form-container {
-            max-width: 400px;
-            margin: 0 auto;
-        }
-        .form-group {
-            margin-bottom: 20px;
-            text-align: left;
-        }
-        .form-label {
-            display: block;
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 6px;
-            color: #1a1a1a;
-        }
-        .form-input {
-            width: 100%;
-            padding: 10px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            transition: border-color 0.3s;
-        }
-        .form-input:focus {
-            border-color: #088178;
-        }
-        .button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 30px;
-            font-size: 18px;
-            font-weight: 500;
-            color: #fff;
-            background-color: #088178;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            text-decoration: none;
-        }
-        .button:hover {
-            background-color: #046a38;
-        }
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #e3e6f3;
+        font-family: "Roboto", sans-serif;
+      }
+      .container {
+        text-align: center;
+        background-color: #fff;
+        padding: 40px;
+        border-radius: 25px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+      }
+      .logo {
+        font-size: 36px;
+        font-weight: 700;
+        color: #088178;
+        font-style: italic;
+        text-decoration: none;
+        font-family: "Dancing Script", sans-serif;
+        margin-bottom: 20px;
+      }
+      .form-container {
+        max-width: 400px;
+        margin: 0 auto;
+      }
+      .form-group {
+        margin-bottom: 20px;
+        text-align: left;
+      }
+      .form-label {
+        display: block;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 6px;
+        color: #1a1a1a;
+      }
+      .form-input {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        transition: border-color 0.3s;
+      }
+      .form-input:focus {
+        border-color: #088178;
+      }
+      .button {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 12px 30px;
+        font-size: 18px;
+        font-weight: 500;
+        color: #fff;
+        background-color: #088178;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        text-decoration: none;
+      }
+      .button:hover {
+        background-color: #046a38;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <a href="#" class="logo">Cat Bucks</a>
-        <div class="form-container">
-            <h2>Sign Up</h2>
-            <form>
-                <div class="form-group">
-                    <label for="username" class="form-label">Username</label>
-                    <input type="text" id="username" class="form-input" required>
-                </div>
-                <div class="form-group">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" id="email" class="form-input" required>
-                </div>
-                <div class="form-group">
-                    <label for="password" class="form-label">Password</label>
-                    <input type="password" id="password" class="form-input" required>
-                </div>
-                <div class="form-group">
-                    <label for="confirm-password" class="form-label">Confirm Password</label>
-                    <input type="password" id="confirm-password" class="form-input" required>
-                </div>
-                <button type="submit" class="button">Sign Up</button>
-            </form>
-        </div>
+      <a href="#" class="logo">Cat Bucks</a>
+      <div class="form-container">
+        <h2>Sign Up</h2>
+        <form>
+          <div class="form-group">
+            <label for="username" class="form-label">Username</label>
+            <input
+              type="text"
+              id="username-signup"
+              class="form-input"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email-signup" class="form-input" required />
+          </div>
+          <div class="form-group">
+            <label for="password" class="form-label">Password</label>
+            <input
+              type="password"
+              id="password-signup"
+              class="form-input"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="confirm-password" class="form-label"
+              >Confirm Password</label
+            >
+            <input
+              type="password"
+              id="confirm-password"
+              class="form-input"
+              required
+            />
+          </div>
+          <button type="submit" class="button">Sign Up</button>
+        </form>
+      </div>
     </div>
-</body>
+  </body>
+  <script src="../js/login.js"></script>
 </html>
