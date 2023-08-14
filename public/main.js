@@ -1,4 +1,4 @@
-let cartIcon = document.querySelector(".cart-icon");
+let cartIcon = document.querySelector("#cart-icon");
 let cart = document.querySelector(".cart");
 let closeCart = document.querySelector("#close-cart");
 
@@ -23,14 +23,13 @@ function ready(){
     var removeCartButtons = document.getElementsByClassName('cart-remove')
     console.log(removeCartButtons)
     for(var i = 0; i < removeCartButtons.length; i++){
-        var button = removeCartButtons[i]
+        var button = removeCartButtons[i];
         button.addEventListener('click', removeCartItem)
     }
 
     var quantityInputs = document.getElementsByClassName('cart-quantity')
     for(var i = 0; i < quantityInputs.length; i++){
-        for (var j = 0; j < quantityInputs.length; j++){
-            var input = quantityInputs[i]
+            var input = quantityInputs[i];
             input.addEventListener('change', quantityChanged)
     }
     // functionality to add items to the cart
@@ -44,7 +43,7 @@ function ready(){
     document.getElementsByClassName('btn-buy')[0]
     .addEventListener('click', buyButtonClicked);
 
-}}
+}
 
 //functionality to buy button
 function buyButtonClicked(){
@@ -85,8 +84,8 @@ function addCartClicked(event){
 function addProductToCart(title, price, productImg){
     var cartShopBox = document.createElement("div")
     cartShopBox.classList.add("cart-box")
-    var cartItems = document.getElementsByClassName('cart-content')[0]
-    var cartItemsNames = cartItems.getElementsByClassName('cart-product-title')
+    var cartItems = document.getElementsByClassName('cart-content')[0];
+    var cartItemsNames = cartItems.getElementsByClassName('cart-product-title');
     for(var i = 0; i < cartItemsNames.length; i++){
         if(cartItemsNames[i].innerText == title){
             alert('This item is already added to the cart');
@@ -127,8 +126,6 @@ function updatetotal(){
         var price = parseFloat(priceElement.innerText.replace('$',''))
         var quantity = quantityElement.value
         total = total + (price * quantity)
-
-
     }
     document.getElementsByClassName('total-price')[0].innerText = '$' + total;
 }
