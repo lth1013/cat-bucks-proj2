@@ -1,7 +1,8 @@
 {{#each products as |product|}}
+{{#if product.category_id === 1}}
 <div class="pro-container">
             <div class="pro">
-                <img src="{{}}" alt="Birman cat" class="product-img">
+                <img src="../public/images/cats/birman.jpg" alt="Birman cat" class="product-img">
                 <div class="des">
                     <span class="product-title">Birman</span>
                     <h5>The Sacred Cat of Burma</h5>
@@ -9,4 +10,5 @@
                 </div>
                 <a href="#"><i class='bx bx-cart add-cart'></i></a>
             </div>
+            {{/if}}
 {{/each}}

@@ -13,8 +13,13 @@ app.get("/", (req, res) => {
   if (!req.session.logged_in) {
     res.redirect("/welcome.html");
   } else {
-    res.sendFile(__dirname + "/index.html");
+    // res.sendFile(__dirname + "/index.html");
+    res.render("products");
   }
+});
+
+app.get("/products", (req, res) => {
+  res.render("products");
 });
 
 module.exports = router;

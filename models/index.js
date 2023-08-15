@@ -18,6 +18,10 @@ Product.hasMany(Cart, {
   onDelete: "CASCADE",
 });
 
+Product.belongsTo(Category, {
+  foreignKey: "category_id",
+});
+
 Category.hasMany(Product, {
   foreignKey: "category_id",
   onDelete: "CASCADE",
