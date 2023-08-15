@@ -1,23 +1,26 @@
-let cartIcon = document.querySelector(".cart-icon");
-let cart = document.querySelector(".cart");
-let closeCart = document.querySelector("#close-cart");
-
-
-//Functionality to open and close cart
-cartIcon.onclick = () => {
-    cart.classList.add("active");
-};
-closeCart.onclick = () => {
-    cart.classList.remove("active");
-};
-
-// get the cart working
-if(document.readyState == 'loading'){
-    document.addEventListener('DOMContentLoaded', ready);
-} 
-else {
-    ready();
+// Wait for the DOM to be ready before running JavaScript
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+        setupCartFunctionality(); // Call your cart functionality setup function here
+    });
+} else {
+    setupCartFunctionality(); // Call your cart functionality setup function here
 }
+
+function setupCartFunctionality() {
+    let cartIcon = document.querySelector(".cart-icon");
+    let cart = document.querySelector(".cart");
+    let closeCart = document.querySelector("#close-cart");
+
+    // Functionality to open and close cart
+    cartIcon.onclick = () => {
+        cart.classList.add("active");
+    };
+    closeCart.onclick = () => {
+        cart.classList.remove("active");
+    };
+}
+
 
 // function ready(){
 //     // functionality to remove items from the cart
