@@ -3,48 +3,112 @@
     "product_name": "Birman",
     "price": 50,
     "description": "The Sacred Cat of Burma",
-    "image": "images/cats/birman.jpg"
+    "image": "images/cats/birman.jpg",
+    "category_id": 1
   },
   {
     "product_name": "British Shorthair",
     "price": 50,
     "description": "Pedigreed Version",
-    "image": "images/cats/British-Shorthair.jpg"
+    "image": "images/cats/British-Shorthair.jpg",
+    "category_id": 1
   },
   {
     "product_name": "Maine Coon",
     "price": 50,
     "description": "Largest Domesticated Cat",
-    "image": "images/cats/alt-maine-coon.jpg"
+    "image": "images/cats/alt-maine-coon.jpg",
+    "category_id": 1
   },
   {
     "product_name": "Persian Cat",
     "price": 50,
     "description": "The Persian Longhair",
-    "image": "images/cats/persian-cat.jpg"
+    "image": "images/cats/persian-cat.jpg",
+    "category_id": 1
   },
   {
     "product_name": "Scottish Fold",
     "price": 50,
     "description": "Owl-like Cat",
-    "image": "images/cats/scottish-fold.jpg"
+    "image": "images/cats/scottish-fold.jpg",
+    "category_id": 1
   },
   {
     "product_name": "Siamese",
     "price": 50,
     "description": "Highly Intelligent and very Vocal",
-    "image": "images/cats/siamese.jpg"
+    "image": "images/cats/siamese.jpg",
+    "category_id": 1
   },
   {
     "product_name": "Siberian Cat",
     "price": 50,
     "description": "Landrace of Domestic Cats",
-    "image": "images/cats/siberian-cat.jpg"
+    "image": "images/cats/siberian-cat.jpg",
+    "category_id": 1
   },
   {
     "product_name": "Sphynx",
     "price": 50,
     "description": "Hairless Cat",
-    "image": "images/cats/sphynx-cat.jpg"
+    "image": "images/cats/sphynx-cat.jpg",
+    "category_id": 1
+  },
+  {
+    "product_name": "Chew Toy Mouse",
+    "description": "Interactive Small Mouse",
+    "image": "images/cat-toys/chew-toy.jpg",
+    "price": 50,
+    "category_id": 2
+  },
+  {
+    "product_name": "Interactive Cat Laser",
+    "description": "Pointer 3 in 1",
+    "image": "images/cat-toys/laser.jpg",
+    "price": 50,
+    "category_id": 2
+  },
+  {
+    "product_name": "Plush Ball",
+    "description": "Multicolor Chew Toy",
+    "image": "images/cat-toys/plush-ball.jpg",
+    "price": 50,
+    "category_id": 2
+  },
+  {
+    "product_name": "Plush Fish Pet",
+    "description": "Creative 3D Fish Shape",
+    "image": "images/cat-toys/plush-fish.jpg",
+    "price": 50,
+    "category_id": 2
+  },
+  {
+    "product_name": "Fruit Shaped Plush",
+    "description": "Bite-Resistant",
+    "image": "images/cat-toys/plush-fruit.jpg",
+    "price": 50,
+    "category_id": 2
+  },
+  {
+    "product_name": "Polyester Plush Ball",
+    "description": "Multicolor Plushes",
+    "image": "images/cat-toys/plush.jpg",
+    "price": 50,
+    "category_id": 2
+  },
+  {
+    "product_name": "Squishy Panda Buns",
+    "description": "Stress Reliever Ball",
+    "image": "images/cat-toys/squish.jpg",
+    "price": 50,
+    "category_id": 2
+  },
+  {
+    "product_name": "Feather Teaser",
+    "description": "Interactive Bell Toy",
+    "image": "images/cat-toys/teaser.jpg",
+    "price": 50,
+    "category_id": 2
   }
 ]

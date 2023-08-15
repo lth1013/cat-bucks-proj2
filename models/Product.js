@@ -24,6 +24,13 @@ Product.init(
     price: {
       type: DataTypes.DECIMAL(10, 2),
     },
+    category_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "category",
+        key: "id",
+      },
+    },
   },
   {
     sequelize,
