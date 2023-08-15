@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const product_id = event.target.getAttribute("data-id");
 
-    const response = await fetch("/api/cart", {
+    const response = await fetch("/", {
       method: "POST",
       body: JSON.stringify({
         product_id,
@@ -18,8 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     });
 
-    if (response.ok) {
-      document.location.replace("/cart");
+    if (response.ok) {;
     } else {
       alert("Failed to add product to cart");
     }

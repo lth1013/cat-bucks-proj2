@@ -2,13 +2,15 @@
 {{#if product.category_id === 1}}
 <div class="pro-container">
             <div class="pro">
-                <img src="../public/images/cats/birman.jpg" alt="Birman cat" class="product-img">
+                <img src={{product.image}} alt="Birman cat" class="product-img">
                 <div class="des">
-                    <span class="product-title">Birman</span>
-                    <h5>The Sacred Cat of Burma</h5>
-                    <h4 class="price">$50</h4>
+                    <span class="product-title">{{product.product_name}}</span>
+                    <h5>{{product.description}}</h5>
+                    <h4 class="price">${{product.price}}</h4>
                 </div>
-                <a href="#"><i class='bx bx-cart add-cart'></i></a>
+                <button class=".add-to-cart-btn">
+                    <a href="#"><i class='bx bx-cart add-cart'></i></a>
+                </button>
             </div>
             {{/if}}
 {{/each}}
