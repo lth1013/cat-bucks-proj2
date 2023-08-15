@@ -4,6 +4,7 @@ let count = 0;
  document.getElementById("catButton").addEventListener("click", () => {
    count += 10;
    document.getElementById("countLabel").innerHTML = "$" + count;
+   sessionStorage.setItem("count", count);
  });
 
 
