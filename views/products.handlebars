@@ -1,51 +1,58 @@
-<link rel="stylesheet" href="../public/style.css">
+<link rel="stylesheet" href="/public/css/style.css" />
 {{#each products as |product|}}
-{{#if product.category_id === 1}}
-<div class="pro-container" id="cats">
-            <div class="pro">
-                <img src={{product.image}} alt="Birman cat" class="product-img">
-                <div class="des">
-                    <span class="product-title">{{product.product_name}}</span>
-                    <h5>{{product.description}}</h5>
-                    <h4 class="price">${{product.price}}</h4>
-                </div>
-                <button class=".add-to-cart-btn">
-                    <a href="#"><i class='bx bx-cart add-cart'></i></a>
-                </button>
-            </div>
-            {{/if}}
+  {{#isEqual product.category_id 1}}
+    <div class="pro-container" id="cats">
+      <div class="pro">
+        <img src={{product.image}} alt="Birman cat" class="product-img" />
+        <div class="des">
+          <span class="product-title">{{product.product_name}}</span>
+          <h5>{{product.description}}</h5>
+          <h4 class="price">${{product.price}}</h4>
+        </div>
+        <button class="add-to-cart-btn">
+          <a href="#"><i class="bx bx-cart add-cart"></i></a>
+        </button>
+      </div>
+    </div>
+  {{/isEqual}}
 {{/each}}
-<div id="toys"> <p>z</p> </div>
-{{#each products as |product|}}
-{{#if product.category_id === 2}}
-<div class="pro-container">
-            <div class="pro">
-                <img src={{product.image}} alt="Birman cat" class="product-img">
-                <div class="des">
-                    <span class="product-title">{{product.product_name}}</span>
-                    <h5>{{product.description}}</h5>
-                    <h4 class="price">${{product.price}}</h4>
-                </div>
-                <button class=".add-to-cart-btn">
-                    <a href="#"><i class='bx bx-cart add-cart'></i></a>
-                </button>
-            </div>
-            {{/if}}
-{{/each}}
-<div id="food"> <p>z</p> </div>
-{{#each products as |product|}}
-{{#if product.category_id === 2}}
-<div class="pro-container">
-            <div class="pro">
-                <img src={{product.image}} alt="Birman cat" class="product-img">
-                <div class="des">
-                    <span class="product-title">{{product.product_name}}</span>
-                    <h5>{{product.description}}</h5>
-                    <h4 class="price">${{product.price}}</h4>
-                </div>
-                <button class=".add-to-cart-btn">
-                    <a href="#"><i class='bx bx-cart add-cart'></i></a>
-                </button>
-            </div>
-            {{/if}}
-{{/each}}
+
+<div id="toys">
+  {{#each products as |product|}}
+    {{#isEqual product.category_id 2}}
+      <div class="pro-container">
+        <div class="pro">
+          <img src={{product.image}} alt="Birman cat" class="product-img" />
+          <div class="des">
+            <span class="product-title">{{product.product_name}}</span>
+            <h5>{{product.description}}</h5>
+            <h4 class="price">${{product.price}}</h4>
+          </div>
+          <button class="add-to-cart-btn">
+            <a href="#"><i class="bx bx-cart add-cart"></i></a>
+          </button>
+        </div>
+      </div>
+    {{/isEqual}}
+  {{/each}}
+</div>
+
+<div id="food">
+  {{#each products as |product|}}
+    {{#isEqual product.category_id 3}}
+      <div class="pro-container">
+        <div class="pro">
+          <img src={{product.image}} alt="Birman cat" class="product-img" />
+          <div class="des">
+            <span class="product-title">{{product.product_name}}</span>
+            <h5>{{product.description}}</h5>
+            <h4 class="price">${{product.price}}</h4>
+          </div>
+          <button class="add-to-cart-btn">
+            <a href="#"><i class="bx bx-cart add-cart"></i></a>
+          </button>
+        </div>
+      </div>
+    {{/isEqual}}
+  {{/each}}
+</div>
