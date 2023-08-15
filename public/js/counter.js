@@ -1,5 +1,13 @@
 // i want a function that when a button is clicked, I will add 10 to the counter which is an object related to each user
 
+let count = 0;
+ document.getElementById("catButton").addEventListener("click", () => {
+   count += 10;
+   document.getElementById("countLabel").innerHTML = "$" + count;
+ });
+
+
+
 // document.addEventListener("DOMContentLoaded", () => {
 //   const counterBtn = document.querySelector(".counter-btn");
     
