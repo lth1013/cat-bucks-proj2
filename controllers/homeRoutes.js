@@ -11,7 +11,7 @@ const app = express();
 
 router.get("/", (req, res) => {
   if (!req.session.logged_in) {
-    res.redirect("/welcome.html");
+    res.redirect("/");
   } else {
     // res.sendFile(__dirname + "/index.html");
     res.render("products");
@@ -20,14 +20,7 @@ router.get("/", (req, res) => {
 
 router.get("/products", async (req, res) => {
   try {
-    const productData = await Product.findAll({
-      include: [
-        {
-          model: Category,
-          attributes: ["category_name"],
-        },
-      ],
-    });
+    const productData = await Product.findAll();
 
     const products = productData.map((product) => product.get({ plain: true }));
 
@@ -40,6 +33,10 @@ router.get("/products", async (req, res) => {
 
     console.log(err);
   }
+});
+
+router.get("/login", async (req, res) => {
+  res.sendFile("public/html/welcome.html");
 });
 
 module.exports = router;

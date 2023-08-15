@@ -1,7 +1,12 @@
-// Assuming you're using Handlebars library
-const Handlebars = require('handlebars');
+const handlebars = require("handlebars");
 
-// Define the custom helper
-Handlebars.registerHelper('eq', function(a, b, options) {
-    return a === b ? options.fn(this) : options.inverse(this);
-});
+handlebars.registerHelper(
+  "isEqual",
+  function (valueToCompare, targetValue, options) {
+    if (valueToCompare === targetValue) {
+      return options.fn(this);
+    } else {
+      return options.inverse(this);
+    }
+  }
+);
