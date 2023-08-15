@@ -110,5 +110,61 @@
     "image": "../public/images/cat-toys/teaser.jpg",
     "price": 50,
     "category_id": 2
+  },
+  {
+    "product_name": "Breederpack Supreme Cat Chunks",
+    "price": 50,
+    "description": "Only the best nutrition for your Cat",
+    "image": "images/cat-food/breederpack.jpg",
+    "category_id": 3
+  },
+  {
+    "product_name": "My Cat Adult (Chicken & Fish) Dry Food",
+    "price": 50,
+    "description": "Only the best nutrition for your Cat",
+    "image": "images/cat-food/cat-adult.jpg",
+    "category_id": 3
+  },
+  {
+    "product_name": "Felix Kitten Food Mixed Chkn in Jelly",
+    "price": 50,
+    "description": "Only the best nutrition for your Cat",
+    "image": "images/cat-food/felix.jpg",
+    "category_id": 3
+  },
+  {
+    "product_name": "Gourmet Gold Savoury Cake",
+    "price": 50,
+    "description": "Only the best nutrition for your Cat",
+    "image": "images/cat-food/gormet.jpg",
+    "category_id": 3
+  },
+  {
+    "product_name": "Purina Proplan Pro Plan Kitten Turkey",
+    "price": 50,
+    "description": "Only the best nutrition for your Cat",
+    "image": "images/cat-food/proplan.jpg",
+    "category_id": 3
+  },
+  {
+    "product_name": "Purina Proplan Purina Gourmet Chef's Collection in Gravy",
+    "price": 50,
+    "description": "Only the best nutrition for your Cat",
+    "image": "images/cat-food/purina.jpg",
+    "category_id": 3
+  },
+  {
+    "product_name": "Royal Canin Exigent Dry Cat Food",
+    "price": 50,
+    "description": "Only the best nutrition for your Cat",
+    "image": "images/cat-food/royal.jpg",
+    "category_id": 3
+  },
+  {
+    "product_name": "Whiskas Cat Tins Ocean Menu in Jelly",
+    "price": 50,
+    "description": "Only the best nutrition for your Cat",
+    "image": "images/cat-food/whiskas.jpg",
+    "category_id": 3
   }
 ]
