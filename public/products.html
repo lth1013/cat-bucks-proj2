@@ -22,7 +22,7 @@
                 <li><a href="#toys">Cat Toys</a></li>
                 <li><a href="#food">Cat Food</a></li>
                 <li><a href="#"><i class='bx bx-cart cart-icon'></i></a></li>
-                <li>${Bucks}</li>
+                <li id="countLabel">$0</li>
             </ul>
             <div class="cart">
                 <h2 class="cart-title">Your Cart</h2>
@@ -293,5 +293,9 @@
     <section>
         
         <script src="main.js"></script>
+        <script>
+            var userCount = sessionStorage.getItem("count");
+            document.getElementById("countLabel").innerHTML = "$" + userCount;
+        </script>
 </body>
 </html>
