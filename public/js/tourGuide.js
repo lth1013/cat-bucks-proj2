@@ -1,4 +1,3 @@
-import { TourGuideClient } from "@sjmc11/tourguidejs/src/Tour";
-const tg = new TourGuideClient({});
+const tg = new TourGuideClient({ exitOnClickOutside: false });
 
-const options = {};
+tg.start();
