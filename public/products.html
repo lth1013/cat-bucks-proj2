@@ -35,7 +35,7 @@
                 </div>
 
                 <!-- Buy button -->
-                <button type="button" class="btn-buy">Buy Now</button>
+                <button type="button" class="btn-buy" id="buy-now">Buy Now</button>
 
                 <!-- Cart close -->
                 <i class='bx bxs-x-circle' id="close-cart" ></i>
@@ -297,5 +297,6 @@
             var userCount = sessionStorage.getItem("count");
             document.getElementById("countLabel").innerHTML = "$" + userCount;
         </script>
+        <script src="js/addToCart.js"></script>
 </body>
 </html>
