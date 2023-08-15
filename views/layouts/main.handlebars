@@ -1,53 +1,48 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cat Bucks</title>
     <script src="./js/tourGuide.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="/public/css/style.css" />
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-</head>
-<body>
-    {{!-- <div data-tg-tour="Welcome to the tour"> for </div> --}}
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    {{! <div data-tg-tour="Welcome to the tour"> for </div> }}
     <section id="header">
-        <a href="#" class="logo">Cat Bucks</a>
-        <div>
-            <ul id="navbar">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#cats">Cats</a></li>
-                <li><a href="#toys">Cat Toys</a></li>
-                <li><a href="#food">Cat Food</a></li>
-                <li><a href="#"><i class='bx bx-cart cart-icon'></i></a></li>
-            </ul>
-            <div class="cart">
-                <h2 class="cart-title">Your Cart</h2>
-                <div class="cart-content">
-                    
-                </div>
-                <div class="total">
-                    <div class="total-title">Total</div>
-                    <div class="total-price">$0</div>
-                </div>
+      <a href="#" class="logo">Cat Bucks</a>
+      <div>
+        <ul id="navbar">
+          <li><a href="/">Home</a></li>
+          <li><a href="#cats">Cats</a></li>
+          <li><a href="#toys">Cat Toys</a></li>
+          <li><a href="#food">Cat Food</a></li>
+          <li><a href="#"><i class="bx bx-cart cart-icon"></i></a></li>
+        </ul>
+        <div class="cart">
+          <h2 class="cart-title">Your Cart</h2>
+          <div class="cart-content">
+          </div>
+          <div class="total">
+            <div class="total-title">Total</div>
+            <div class="total-price">$0</div>
+          </div>
 
-                <!-- Buy button -->
-                <button type="button" class="btn-buy">Buy Now</button>
+          <!-- Buy button -->
+          <button type="button" class="btn-buy">Buy Now</button>
 
-                <!-- Cart close -->
-                <i class='bx bxs-x-circle' id="close-cart" ></i>
-            </div>
-        </div>  
+          <!-- Cart close -->
+          <i class="bx bxs-x-circle" id="close-cart"></i>
+        </div>
+      </div>
     </section>
-<main>
-    {{{body}}}
-</main>
-
-    </body>
-</html>
-
-    <section>
-        
-        <script src="main.js"></script>
-</body>
+    <main>
+      {{{body}}}
+    </main>
+    <script src="main.js"></script>
+  </body>
 </html>

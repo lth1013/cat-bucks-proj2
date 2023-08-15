@@ -9,14 +9,14 @@ const app = express();
 // if the user is not logged in, we are gonna want to redirect them to the welcome.html page.
 // we don't need to render any products here, because we are not on the products page.
 
-router.get("/", (req, res) => {
-  if (!req.session.logged_in) {
-    res.redirect("/");
-  } else {
-    // res.sendFile(__dirname + "/index.html");
-    res.render("products");
-  }
+router.get("/welcome", (req, res) => {
+  res.render("welcome");
 });
+
+
+router.get("/", withAuth, (req, res) => {
+    res.render("homepage");
+  });
 
 router.get("/products", async (req, res) => {
   try {
