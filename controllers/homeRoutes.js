@@ -9,7 +9,7 @@ const app = express();
 // if the user is not logged in, we are gonna want to redirect them to the welcome.html page.
 // we don't need to render any products here, because we are not on the products page.
 
-app.get("/", (req, res) => {
+router.get("/", (req, res) => {
   if (!req.session.logged_in) {
     res.redirect("/welcome.html");
   } else {
@@ -18,8 +18,28 @@ app.get("/", (req, res) => {
   }
 });
 
-app.get("/products", (req, res) => {
-  res.render("products");
+router.get("/products", async (req, res) => {
+  try {
+    const productData = await Product.findAll({
+      include: [
+        {
+          model: Category,
+          attributes: ["category_name"],
+        },
+      ],
+    });
+
+    const products = productData.map((product) => product.get({ plain: true }));
+
+    res.render("products", {
+      products,
+      // logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+
+    console.log(err);
+  }
 });
 
 module.exports = router;
