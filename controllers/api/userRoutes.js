@@ -19,19 +19,41 @@ router.post("/", async (req, res) => {
 });
 
 router.post("/login", async (req, res) => {
+  // console.log(req);
   try {
-    const user = await User.findOne({
+    const userData = await User.findOne({
       where: { username: req.body.username },
     });
+    console.log(userData);
 
-    if (!user || !(await bcrypt.compare(req.body.password, user.password))) {
-      res.status(400).json({ message: "Invalid credentials" });
+    // if (
+    //   !userData ||
+    //   !(await bcrypt.compare(req.body.password, userData.password))
+    // ) {
+    //   res.status(400).json({ message: "Invalid credentials" });
+    //   return;
+    // }
+    if (!userData) {
+      res.status(400).json({ message: "user not found" });
       return;
     }
 
-    req.session.user_id = user.id;
-    req.session.logged_in = true;
-    res.json({ user, message: "Logged in successfully" });
+    const validPassword = userData.checkPassword(req.body.password);
+
+    if (!validPassword) {
+      res.status(400).json({ message: "wrong password" });
+      return;
+    }
+    req.session.save(() => {
+      req.session.user_id = userData.id;
+      req.session.logged_in = true;
+
+      res.json({ user: userData, message: "Logged in successfully" });
+    });
+
+    // req.session.user_id = userData.id;
+    // req.session.logged_in = true;
+    // res.json({ user: userData, message: "Logged in successfully" });
   } catch (err) {
     res.status(400).json({ message: "failed to log in" });
   }
@@ -44,6 +66,17 @@ router.post("/logout", (req, res) => {
     });
   } else {
     res.status(404).end();
+  }
+});
+
+router.get("/list", async (req, res) => {
+  try {
+    const users = await User.findAll({
+      attributes: { exclude: ["password"] },
+    });
+    res.status(200).json(users);
+  } catch (err) {
+    res.status(500).json(err);
   }
 });
 

@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const product_id = event.target.getAttribute("data-id");
 
-    const response = await fetch("/", {
+    const response = await fetch("/api/cart", {
       method: "POST",
       body: JSON.stringify({
         product_id,

@@ -22,7 +22,7 @@ router.get("/", withAuth, async (req, res) => {
   try {
     const userData = await User.findAll({
       attributes: { exclude: ["password"] },
-      order: [["name", "ASC"]],
+      order: [["username", "ASC"]],
     });
 
     const users = userData.map((project) => project.get({ plain: true }));
@@ -31,20 +31,6 @@ router.get("/", withAuth, async (req, res) => {
       users,
       logged_in: req.session.logged_in,
     });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
-router.get("/users", async (req, res) => {
-  try {
-    const userData = await User.findAll({
-      attributes: { exclude: ["password"] },
-      order: [["name", "ASC"]],
-    });
-
-    const users = userData.map((project) => project.get({ plain: true }));
-    console.log(users);
   } catch (err) {
     res.status(500).json(err);
   }

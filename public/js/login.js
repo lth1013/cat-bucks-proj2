@@ -2,22 +2,28 @@ const loginFormHandler = async (event) => {
   event.preventDefault();
 
   // Collect values from the login form
-  const userName = document.querySelector("#username-login").value.trim(); // Corrected variable name
+  const username = document.querySelector("#username-login").value.trim();
   const password = document.querySelector("#password-login").value.trim();
 
-  if (userName && password) {
+  console.log(username, password);
+
+  const stringfied = JSON.stringify({ username, password });
+
+  console.log(stringfied);
+
+  if (username && password) {
     // Send a POST request to the API endpoint
     const response = await fetch("/api/users/login", {
       method: "POST",
-      body: JSON.stringify({ userName, password }), // Corrected variable name
       headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ username, password }),
     });
 
     if (response.ok) {
       // If successful, redirect the browser to the main page
       document.location.replace("/");
     } else {
-      alert(response.statusText);
+      alert(response.statusText, "failed to login");
     }
   }
 };
@@ -25,7 +31,7 @@ const loginFormHandler = async (event) => {
 const signupFormHandler = async (event) => {
   event.preventDefault();
 
-  const userName = document.querySelector("#username-signup").value.trim();
+  const username = document.querySelector("#username-signup").value.trim();
   const email = document.querySelector("#email-signup").value.trim();
   const password = document.querySelector("#password-signup").value.trim();
   const passwordConfirm = document
@@ -33,10 +39,10 @@ const signupFormHandler = async (event) => {
     .value.trim();
 
   if (password === passwordConfirm) {
-    if (userName && email && password) {
+    if (username && email && password) {
       const response = await fetch("/api/users", {
         method: "POST",
-        body: JSON.stringify({ userName, email, password }),
+        body: JSON.stringify({ username, email, password }),
         headers: { "Content-Type": "application/json" },
       });
 

@@ -17,15 +17,24 @@
         <div>
             <ul id="navbar">
                 <li><a href="/">Home</a></li>
-                <li><a href="#cats">Cats</a></li>
-                <li><a href="#toys">Cat Toys</a></li>
-                <li><a href="#food">Cat Food</a></li>
+                <li><a href="/products#cats">Cats</a></li>
+                <li><a href="/products#toys">Cat Toys</a></li>
+                <li><a href="/products#food">Cat Food</a></li>
                 <li><a href="#"><i class='bx bx-cart cart-icon'></i></a></li>
+                <li><button type="button" id="logout">logout</button></li>
             </ul>
             <div class="cart">
                 <h2 class="cart-title">Your Cart</h2>
                 <div class="cart-content">
-                    
+                    {{!-- {{#if cart}}
+                    {{#each products |product|}}
+                    <li>  <img src={{product.image}} class="product-img" />
+                    <span class="product-title">{{product.product_name}}</span>
+                    <h5>{{product.description}}</h5>
+                    <h4 class="price">${{product.price}}</h4>
+                    </li>
+                    {{/each}}
+                    {{#if}} --}}
                 </div>
                 <div class="total">
                     <div class="total-title">Total</div>
