@@ -51,18 +51,6 @@ router.get("/products", async (req, res) => {
   }
 });
 
-router.post("/update-wallet", async (req, res) => {
-  const userId = req.body.userId;
-  const updatedCount = req.body.updatedCount;
-
-  const success = await updateWallet(userId, updatedCount);
-
-  if (success) {
-    return res.status(200).send("Wallet updated successfully");
-  } else {
-    return res.status(404).send("User not found or error updating wallet");
-  }
-});
 
 router.get("/login", async (req, res) => {
   res.render("login");
