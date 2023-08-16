@@ -1,5 +1,6 @@
-<link rel="stylesheet" href="../public/css/style.css" />
+<link rel="stylesheet" href="/public/css/style.css" />
 {{#each products as |product|}}
+  <style> img {width: 250px; height: 250px}</style>
   {{#isEqual product.category_id 1}}
     <div class="pro-container" id="cats">
       <div class="pro">
@@ -19,6 +20,7 @@
 
 <div id="toys">
   {{#each products as |product|}}
+    <style> img {width: 250px; height: 250px}</style>
     {{#isEqual product.category_id 2}}
       <div class="pro-container">
         <div class="pro">
@@ -39,6 +41,7 @@
 
 <div id="food">
   {{#each products as |product|}}
+    <style> img {width: 250px; height: 250px}</style>
     {{#isEqual product.category_id 3}}
       <div class="pro-container">
         <div class="pro">
