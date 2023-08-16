@@ -6,8 +6,11 @@
     <title>Cat Bucks</title>
     
     {{!-- <script src="./js/tourguide.js"></script> --}}
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="/public/css/style.css" />
+    <link href="
+https://cdn.jsdelivr.net/npm/intro.js@7.2.0/minified/introjs.min.css
+" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/css/style.css" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
@@ -16,12 +19,12 @@
         <a href="#" class="logo">Cat Bucks</a>
         <div>
             <ul id="navbar">
-                <li><a href="/">Home</a></li>
-                <li><a href="/products#cats">Cats</a></li>
-                <li><a href="/products#toys">Cat Toys</a></li>
-                <li><a href="/products#food">Cat Food</a></li>
+                <li data-step="1" data-intro="Press this to go back to the homepage"><a href="/">Home</a></li>
+                <li data-step="2" data-intro="Press this to see the cats you can buy!"><a href="/products#cats">Cats</a></li>
+                <li data-step="3" data-intro="Press this to see the awesome toys for your cats!"><a href="/products#toys">Cat Toys</a></li>
+                <li data-step="4" data-intro="Press this to get the food to feed your cats!"><a href="/products#food">Cat Food</a></li>
                 <li><a href="#"><i class='bx bx-cart cart-icon'></i></a></li>
-                <li><button type="button" id="logout-button">logout</button></li>
+                <li data-step="5" data-intro="Logout Here"><button type="button" id="logout-button">logout</button></li>
             </ul>
             <div class="cart">
                 <h2 class="cart-title">Your Cart</h2>
@@ -52,7 +55,10 @@
     <main>
       {{{body}}}
     </main>
-
+    <script src="
+https://cdn.jsdelivr.net/npm/intro.js@7.2.0/intro.min.js
+"></script>
+    
     </body>
 </html>
 
