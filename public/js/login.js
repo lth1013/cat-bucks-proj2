@@ -2,14 +2,14 @@ const loginFormHandler = async (event) => {
   event.preventDefault();
 
   // Collect values from the login form
-  const userName = document.querySelector("#username-login").value.trim();
+  const userName = document.querySelector("#username-login").value.trim(); // Corrected variable name
   const password = document.querySelector("#password-login").value.trim();
 
   if (userName && password) {
     // Send a POST request to the API endpoint
     const response = await fetch("/api/users/login", {
       method: "POST",
-      body: JSON.stringify({ email, password }),
+      body: JSON.stringify({ userName, password }), // Corrected variable name
       headers: { "Content-Type": "application/json" },
     });
 
