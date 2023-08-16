@@ -36,6 +36,20 @@ router.get("/", withAuth, async (req, res) => {
   }
 });
 
+router.get("/users", async (req, res) => {
+  try {
+    const userData = await User.findAll({
+      attributes: { exclude: ["password"] },
+      order: [["name", "ASC"]],
+    });
+
+    const users = userData.map((project) => project.get({ plain: true }));
+    console.log(users);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 router.get("/products", async (req, res) => {
   try {
     const productData = await Product.findAll();

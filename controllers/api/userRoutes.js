@@ -1,3 +1,4 @@
+const express = require("express");
 const router = require("express").Router();
 const { User } = require("../../models");
 const bcrypt = require("bcrypt");
@@ -32,8 +33,7 @@ router.post("/login", async (req, res) => {
     req.session.logged_in = true;
     res.json({ user, message: "Logged in successfully" });
   } catch (err) {
-    res.status(400).json(err);
-    console.log("failed to log in");
+    res.status(400).json({ message: "failed to log in" });
   }
 });
 
