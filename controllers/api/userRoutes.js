@@ -80,4 +80,21 @@ router.get("/list", async (req, res) => {
   }
 });
 
+router.put("/:id", async (req, res) => {
+  try {
+    const user = await User.findByPk(req.params.id);
+    if (user) {
+      user.wallet = req.body.wallet;
+      await user.save();
+      res.status(200).json({ message: "wallet updated" });
+    } else {
+      res.status(404).json({ message: "user not found" });
+    }
+  } catch (error) {
+    console.error(error);
+
+    res.status(500).json({ message: "error updating wallet" });
+  }
+});
+
 module.exports = router;

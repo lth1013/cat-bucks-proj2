@@ -16,22 +16,5 @@
   </section>
 </div>
 
-<script>
-    const catButton = document.getElementById('catButton');
-    catButton.addEventListener('click', async () => {
-        const response = await fetch('/api/wallet', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ wallet: 10, action: 'add' }),
-        });
-        if (response.ok) {
-            // Handle success
-            alert('Added 10 Cat Bucks to your wallet!');
-        } else {
-            // Handle error
-            alert('Error adding Cat Bucks to your wallet.');
-        }
-    });
+{{!-- <script src="/js/counter.js"></script> --}}
 </script>
