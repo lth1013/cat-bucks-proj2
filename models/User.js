@@ -24,6 +24,7 @@ User.init(
     wallet: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      defaultValue: 0,
     },
     email: {
       type: DataTypes.STRING,
