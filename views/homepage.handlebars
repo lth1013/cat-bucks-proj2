@@ -3,8 +3,15 @@
     <h1 id="header-color">Click the button below for Cat Bucks!</h1>
     <!-- Add the image and button container -->
     <div id="image-container">
+      <a
+        href="javascript:introJs().setOption('showProgress', true).start();"
+      >Get a demo</a>
       <img id="catImage" src="./images/cats/cat_image.jpg" alt="Cat Image" />
-      <button id="catButton">+10 Cat Bucks</button>
+      <button
+        data-step="6"
+        data-intro="Press this button to add money to wallet"
+        id="catButton"
+      >+10 Cat Bucks</button>
     </div>
   </section>
 
