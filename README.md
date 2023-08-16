@@ -25,7 +25,7 @@ first Sign up or login then press the button for money. Spend the currency on th
 
 1. We learned a very easy to use and fun to implement introJs.
 
-2. We are getting a better understanding of handlebars and how to link different files to them since they don't go by normal file paths
+2. We are getting a better understanding of handlebars and how to link different files to them since they don't go by normal file paths.
 
 ## Author Info
 
