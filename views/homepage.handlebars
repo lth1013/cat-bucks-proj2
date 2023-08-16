@@ -1,11 +1,30 @@
 <div id="content-wrapper">
-  <section id="content">
-    <h1 id="header-color">Click the button below for Cat Bucks!</h1>
-    <!-- Add the image and button container -->
-    <div id="image-container">
-      <img id="catImage" src="./images/cats/cat_image.jpg" alt="Cat Image" />
-      <button id="catButton">+10 Cat Bucks</button>
+        <section id="content">
+            <h1 id="header-color">Click the button below for Cat Bucks!</h1>
+            <!-- Add the image and button container -->
+            <div id="image-container">
+                <img id="catImage" src="./images/cats/cat_image.jpg" alt="Cat Image">
+                <button id="catButton">+10 Cat Bucks</button>
+            </div>
+        </section>
     </div>
-  </section>
 
-</div>
+<script>
+    const catButton = document.getElementById('catButton');
+    catButton.addEventListener('click', async () => {
+        const response = await fetch('/api/wallet', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
+        if (response.ok) {
+            // Handle success
+            updateWallet();
+            alert('Added 10 Cat Bucks to your wallet!');
+        } else {
+            // Handle error
+            alert('Error adding Cat Bucks to your wallet.');
+        }
+    });
+</script>
