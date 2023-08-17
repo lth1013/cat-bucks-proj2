@@ -26,4 +26,5 @@ Category.hasMany(Product, {
   foreignKey: "category_id",
   onDelete: "CASCADE",
 });
+
 module.exports = { User, Cart, Product, Category };
